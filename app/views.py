@@ -19,11 +19,9 @@ class StringByCbv(View):
 def fbvfile(request):
     return render(request,'fbvfile.html')
 
-
 class CbvFile(View):
     def get(self,request):
         return render(request,'CbvFile.html')
-
 
 def isbyfbv(request):
     ESFO=StudentMF()
@@ -38,8 +36,6 @@ def isbyfbv(request):
             return HttpResponse('Invalid')
     return render(request,'isbyfbv.html',d)
 
-
-
 class ISByCbv(View):
     def get(self,request):
         ESFO=StudentMF()
@@ -53,13 +49,6 @@ class ISByCbv(View):
         else:
             return HttpResponse('Invalid')
     
-
-
-
-
-
-
-
 class HtmlByTV(TemplateView):
     template_name='HtmlByTV.html'
 
